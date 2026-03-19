@@ -16,7 +16,9 @@ COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 
 COPY --from=build /app/dist ./dist
-RUN echo '{"compilerOptions":{"outDir":"dist"},"include":[],"exclude":[]}' > tsconfig.json
+COPY tsconfig.json ./
+COPY config ./config
+COPY src ./src
 COPY ./public ./public
 COPY favicon.png ./
 
