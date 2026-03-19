@@ -25,7 +25,7 @@ const config = ({
 	},
 	email: {
 		config: {
-			provider: "email-nodemailer",
+			provider: "@strapi/provider-email-nodemailer",
 			providerOptions: {
 				host: env("SMTP_HOST"),
 				port: env.int("SMTP_PORT", 587),
