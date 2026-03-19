@@ -12,7 +12,13 @@ const config = ({
 				directives: {
 					"img-src": ["'self'", "data:", "blob:", env("S3_CDN_URL", "")],
 					"media-src": ["'self'", "data:", "blob:", env("S3_CDN_URL", "")],
+					"frame-ancestors": ["'self'", env("FRAME_ANCESTORS", "")].filter(
+						Boolean,
+					),
 				},
+			},
+			frameguard: {
+				action: "sameorigin",
 			},
 		},
 	},
