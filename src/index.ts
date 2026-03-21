@@ -1,20 +1,34 @@
-// import type { Core } from '@strapi/strapi';
+import type { Core } from "@strapi/strapi";
 
 export default {
-  /**
-   * An asynchronous register function that runs before
-   * your application is initialized.
-   *
-   * This gives you an opportunity to extend code.
-   */
-  register(/* { strapi }: { strapi: Core.Strapi } */) {},
+	register(/* { strapi }: { strapi: Core.Strapi } */) {},
 
-  /**
-   * An asynchronous bootstrap function that runs before
-   * your application gets started.
-   *
-   * This gives you an opportunity to set up your data model,
-   * run jobs, or perform some special logic.
-   */
-  bootstrap(/* { strapi }: { strapi: Core.Strapi } */) {},
+	bootstrap({ strapi }: { strapi: Core.Strapi }) {
+		strapi.db.lifecycles.subscribe({
+			models: ["admin::user"],
+			async afterCreate(event) {
+				const { result } = event;
+				if (!result.registrationToken || !result.email) return;
+
+				const url = strapi.config.get("server.url") as string;
+				if (!url) return;
+
+				const registrationUrl = `${url}/admin/auth/register?registrationToken=${result.registrationToken}`;
+
+				try {
+					await strapi
+						.plugin("email")
+						.service("email")
+						.send({
+							to: result.email,
+							subject: "You have been invited to Garmeres Strapi",
+							text: `Hi!\n\nYou have been invited to Garmeres Strapi, the content management tool for the Garmeres website.\n\nClick the link below to create your account:\n${registrationUrl}`,
+							html: `<p>Hi!</p><p>You have been invited to Garmeres Strapi, the content management tool for the Garmeres website.</p><p><a href="${registrationUrl}">Click here to create your account</a></p>`,
+						});
+				} catch (err) {
+					strapi.log.error("Failed to send invite email:", err);
+				}
+			},
+		});
+	},
 };
