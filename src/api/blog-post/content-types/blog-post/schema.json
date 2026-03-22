@@ -15,22 +15,42 @@
     }
   },
   "attributes": {
-    "Title": {
+    "thumbnail": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "title": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
+      "minLength": 3,
       "required": true,
       "unique": true
     },
-    "Image": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::image.image"
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "title",
+      "required": true,
+      "minLength": 3
     },
-    "Body": {
+    "body": {
       "type": "blocks",
       "pluginOptions": {
         "i18n": {

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_content_blog_posts",
+  "info": {
+    "displayName": "Blog posts",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "loadMoreButtonText": {
+      "type": "string",
+      "default": "Load more...",
+      "minLength": 3,
+      "required": true
+    },
+    "loadingMessage": {
+      "type": "string",
+      "default": "Loading...",
+      "minLength": 3,
+      "required": true
+    }
+  },
+  "config": {}
+}

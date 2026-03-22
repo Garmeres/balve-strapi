@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_content_rich_texts",
+  "info": {
+    "displayName": "Rich text",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "blocks": {
+      "type": "blocks",
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_content_headings",
+  "info": {
+    "displayName": "Heading",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "minLength": 3,
+      "required": true
+    },
+    "level": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ]
+    },
+    "visible": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "alignment": {
+      "type": "enumeration",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "visible"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": "left",
+      "enum": [
+        "left",
+        "middle",
+        "right"
+      ]
+    }
+  },
+  "config": {}
+}

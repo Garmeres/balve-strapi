@@ -15,24 +15,85 @@
     }
   },
   "attributes": {
-    "Title": {
+    "backgroundImage": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "name": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
+      "minLength": 3,
       "required": true,
       "unique": true
     },
-    "Body": {
-      "type": "blocks",
+    "slug": {
+      "type": "uid",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "required": true
+      "targetField": "name",
+      "required": true,
+      "minLength": 3
+    },
+    "showInMenu": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true,
+      "default": false
+    },
+    "menuIndex": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "showInMenu"
+            },
+            true
+          ]
+        }
+      },
+      "required": true,
+      "default": 0
+    },
+    "body": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "content.rich-text",
+        "content.calendar",
+        "content.membership-registration-form",
+        "content.blog-posts"
+      ]
     }
   }
 }

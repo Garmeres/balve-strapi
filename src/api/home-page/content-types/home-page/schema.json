@@ -15,7 +15,38 @@
     }
   },
   "attributes": {
-    "BannerImage": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Home",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Home",
+      "required": true,
+      "unique": true
+    },
+    "subtitle": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "bannerImage": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
@@ -29,21 +60,7 @@
         "files"
       ]
     },
-    "BannerSubtitle": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
-    "BannerButtonLinkPage": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::page.page"
-    },
-    "BannerButtonLinkText": {
+    "bannerButtonText": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -52,13 +69,25 @@
       },
       "required": true
     },
-    "Body": {
-      "type": "blocks",
+    "bannerButtonLink": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    },
+    "body": {
+      "type": "dynamiczone",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "components": [
+        "content.rich-text",
+        "content.membership-registration-form",
+        "content.calendar",
+        "content.blog-posts",
+        "content.heading"
+      ]
     }
   }
 }

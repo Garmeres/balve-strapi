@@ -9,37 +9,18 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": false
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
     "OrganisationName": {
       "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
       "required": true
     },
     "OrganisationNumber": {
       "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
       "required": true
     },
     "Email": {
       "type": "email",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
       "required": true,
       "default": "meile@garmeres.com"
     },
@@ -49,20 +30,10 @@
     },
     "Vipps": {
       "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
       "required": true
     },
     "AccountNumber": {
       "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
       "required": true
     },
     "IBAN": {
@@ -71,24 +42,6 @@
     },
     "SWIFT": {
       "type": "string",
-      "required": true
-    },
-    "FacebookURL": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "required": true
-    },
-    "InstagramURL": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
       "required": true
     }
   }
