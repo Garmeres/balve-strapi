@@ -1,99 +1,96 @@
 {
-  "kind": "collectionType",
-  "collectionName": "pages",
-  "info": {
-    "singularName": "page",
-    "pluralName": "pages",
-    "displayName": "Page"
-  },
-  "options": {
-    "draftAndPublish": true
-  },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
-  "attributes": {
-    "backgroundImage": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
-    "name": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "minLength": 3,
-      "required": true,
-      "unique": true
-    },
-    "slug": {
-      "type": "uid",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "targetField": "name",
-      "required": true,
-      "minLength": 3
-    },
-    "showInMenu": {
-      "type": "boolean",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "required": true,
-      "default": false
-    },
-    "menuIndex": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "conditions": {
-        "visible": {
-          "==": [
-            {
-              "var": "showInMenu"
-            },
-            true
-          ]
-        }
-      },
-      "required": true,
-      "default": 0
-    },
-    "body": {
-      "type": "dynamiczone",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "components": [
-        "content.rich-text",
-        "content.calendar",
-        "content.membership-registration-form",
-        "content.blog-posts"
-      ]
-    }
-  }
+	"kind": "collectionType",
+	"collectionName": "pages",
+	"info": {
+		"singularName": "page",
+		"pluralName": "pages",
+		"displayName": "Page"
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"pluginOptions": {
+		"i18n": {
+			"localized": true
+		}
+	},
+	"attributes": {
+		"backgroundImage": {
+			"type": "media",
+			"pluginOptions": {
+				"i18n": {
+					"localized": false
+				}
+			},
+			"multiple": false,
+			"required": false,
+			"allowedTypes": ["images"]
+		},
+		"name": {
+			"type": "string",
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			},
+			"minLength": 3,
+			"required": true,
+			"unique": true
+		},
+		"slug": {
+			"type": "uid",
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			},
+			"targetField": "name",
+			"required": true,
+			"minLength": 3
+		},
+		"showInMenu": {
+			"type": "boolean",
+			"pluginOptions": {
+				"i18n": {
+					"localized": false
+				}
+			},
+			"required": true,
+			"default": false
+		},
+		"menuIndex": {
+			"type": "integer",
+			"pluginOptions": {
+				"i18n": {
+					"localized": false
+				}
+			},
+			"conditions": {
+				"visible": {
+					"==": [
+						{
+							"var": "showInMenu"
+						},
+						true
+					]
+				}
+			},
+			"required": true,
+			"default": 0
+		},
+		"body": {
+			"type": "dynamiczone",
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			},
+			"components": [
+				"content.rich-text",
+				"content.calendar",
+				"content.membership-registration-form",
+				"content.blog-posts"
+			]
+		}
+	}
 }

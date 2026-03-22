@@ -7,40 +7,40 @@
     "displayName": "Contact"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "OrganisationName": {
+    "organisationName": {
       "type": "string",
       "required": true
     },
-    "OrganisationNumber": {
+    "organisationNumber": {
       "type": "string",
       "required": true
     },
-    "Email": {
+    "email": {
       "type": "email",
       "required": true,
       "default": "meile@garmeres.com"
     },
-    "Address": {
+    "address": {
       "type": "text",
       "required": true
     },
-    "Vipps": {
+    "vipps": {
       "type": "string",
       "required": true
     },
-    "AccountNumber": {
+    "bankAccount": {
       "type": "string",
       "required": true
     },
-    "IBAN": {
+    "iban": {
       "type": "string",
       "required": true
     },
-    "SWIFT": {
+    "swift": {
       "type": "string",
       "required": true
     }

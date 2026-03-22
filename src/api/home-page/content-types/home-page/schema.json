@@ -1,93 +1,91 @@
 {
-  "kind": "singleType",
-  "collectionName": "home_pages",
-  "info": {
-    "singularName": "home-page",
-    "pluralName": "home-pages",
-    "displayName": "Home page"
-  },
-  "options": {
-    "draftAndPublish": true
-  },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
-  "attributes": {
-    "name": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "default": "Home",
-      "required": true,
-      "unique": true
-    },
-    "title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "default": "Home",
-      "required": true,
-      "unique": true
-    },
-    "subtitle": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
-    "bannerImage": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
-    "bannerButtonText": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
-    "bannerButtonLink": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::page.page"
-    },
-    "body": {
-      "type": "dynamiczone",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "components": [
-        "content.rich-text",
-        "content.membership-registration-form",
-        "content.calendar",
-        "content.blog-posts",
-        "content.heading"
-      ]
-    }
-  }
+	"kind": "singleType",
+	"collectionName": "home_pages",
+	"info": {
+		"singularName": "home-page",
+		"pluralName": "home-pages",
+		"displayName": "Home page"
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"pluginOptions": {
+		"i18n": {
+			"localized": true
+		}
+	},
+	"attributes": {
+		"name": {
+			"type": "string",
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			},
+			"default": "Home",
+			"required": true,
+			"unique": true
+		},
+		"title": {
+			"type": "string",
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			},
+			"default": "Garmeres",
+			"minLength": 3,
+			"required": true,
+			"unique": false
+		},
+		"subtitle": {
+			"type": "text",
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			},
+			"required": true
+		},
+		"bannerImage": {
+			"type": "media",
+			"pluginOptions": {
+				"i18n": {
+					"localized": false
+				}
+			},
+			"multiple": false,
+			"required": true,
+			"allowedTypes": ["images"]
+		},
+		"bannerButtonText": {
+			"type": "string",
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			},
+			"required": true
+		},
+		"bannerButtonLink": {
+			"type": "relation",
+			"relation": "oneToOne",
+			"target": "api::page.page"
+		},
+		"body": {
+			"type": "dynamiczone",
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			},
+			"components": [
+				"content.rich-text",
+				"content.membership-registration-form",
+				"content.calendar",
+				"content.blog-posts",
+				"content.heading"
+			]
+		}
+	}
 }

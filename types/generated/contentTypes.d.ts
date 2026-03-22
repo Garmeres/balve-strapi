@@ -472,7 +472,7 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         minLength: 3;
       }>;
-    thumbnail: Schema.Attribute.Media<'images' | 'files'> &
+    thumbnail: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -503,32 +503,32 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
     singularName: 'contact';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
-    AccountNumber: Schema.Attribute.String & Schema.Attribute.Required;
-    Address: Schema.Attribute.Text & Schema.Attribute.Required;
+    address: Schema.Attribute.Text & Schema.Attribute.Required;
+    bankAccount: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Email: Schema.Attribute.Email &
+    email: Schema.Attribute.Email &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'meile@garmeres.com'>;
-    IBAN: Schema.Attribute.String & Schema.Attribute.Required;
+    iban: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::contact.contact'
     > &
       Schema.Attribute.Private;
-    OrganisationName: Schema.Attribute.String & Schema.Attribute.Required;
-    OrganisationNumber: Schema.Attribute.String & Schema.Attribute.Required;
+    organisationName: Schema.Attribute.String & Schema.Attribute.Required;
+    organisationNumber: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    SWIFT: Schema.Attribute.String & Schema.Attribute.Required;
+    swift: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Vipps: Schema.Attribute.String & Schema.Attribute.Required;
+    vipps: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -556,7 +556,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    bannerImage: Schema.Attribute.Media<'images' | 'files'> &
+    bannerImage: Schema.Attribute.Media<'images'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -604,13 +604,15 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       }>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
-      Schema.Attribute.Unique &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }> &
-      Schema.Attribute.DefaultTo<'Home'>;
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 3;
+      }> &
+      Schema.Attribute.DefaultTo<'Garmeres'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -633,7 +635,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    backgroundImage: Schema.Attribute.Media<'images' | 'files'> &
+    backgroundImage: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -709,15 +711,14 @@ export interface ApiSocialMediaSocialMedia extends Struct.CollectionTypeSchema {
     singularName: 'social-media';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Icon: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required;
-    Index: Schema.Attribute.Integer &
+    icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    index: Schema.Attribute.Integer &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<0>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -726,7 +727,7 @@ export interface ApiSocialMediaSocialMedia extends Struct.CollectionTypeSchema {
       'api::social-media.social-media'
     > &
       Schema.Attribute.Private;
-    Name: Schema.Attribute.String &
+    name: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
       Schema.Attribute.SetMinMaxLength<{
@@ -736,7 +737,7 @@ export interface ApiSocialMediaSocialMedia extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    URL: Schema.Attribute.String &
+    url: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
         minLength: 5;
