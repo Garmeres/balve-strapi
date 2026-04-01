@@ -28,6 +28,7 @@ const config = ({
 		enabled: true,
 		config: {
 			importOnBootstrap: true,
+			excludedConfig: ["admin-role"],
 		},
 	},
 	upload: env("NODE_ENV") === "production" ? s3Upload(env) : { config: {} },
