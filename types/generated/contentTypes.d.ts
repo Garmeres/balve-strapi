@@ -478,6 +478,12 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    thumbnailCredit: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &

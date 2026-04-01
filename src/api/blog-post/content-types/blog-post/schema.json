@@ -1,60 +1,70 @@
 {
-	"kind": "collectionType",
-	"collectionName": "blog_posts",
-	"info": {
-		"singularName": "blog-post",
-		"pluralName": "blog-posts",
-		"displayName": "Blog post"
-	},
-	"options": {
-		"draftAndPublish": true
-	},
-	"pluginOptions": {
-		"i18n": {
-			"localized": true
-		}
-	},
-	"attributes": {
-		"thumbnail": {
-			"type": "media",
-			"pluginOptions": {
-				"i18n": {
-					"localized": false
-				}
-			},
-			"multiple": false,
-			"allowedTypes": ["images"]
-		},
-		"title": {
-			"type": "string",
-			"pluginOptions": {
-				"i18n": {
-					"localized": true
-				}
-			},
-			"minLength": 3,
-			"required": true,
-			"unique": true
-		},
-		"slug": {
-			"type": "uid",
-			"pluginOptions": {
-				"i18n": {
-					"localized": true
-				}
-			},
-			"targetField": "title",
-			"required": true,
-			"minLength": 3
-		},
-		"body": {
-			"type": "blocks",
-			"pluginOptions": {
-				"i18n": {
-					"localized": true
-				}
-			},
-			"required": true
-		}
-	}
+  "kind": "collectionType",
+  "collectionName": "blog_posts",
+  "info": {
+    "singularName": "blog-post",
+    "pluralName": "blog-posts",
+    "displayName": "Blog post"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "thumbnail": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "thumbnailCredit": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "minLength": 3,
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "title",
+      "required": true,
+      "minLength": 3
+    },
+    "body": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    }
+  }
 }

@@ -34,6 +34,20 @@
           "sortable": false
         }
       },
+      "thumbnailCredit": {
+        "edit": {
+          "label": "Thumbnail credit",
+          "description": "Caption text underneath the blog post thumbnail, crediting its creator",
+          "placeholder": "E.g. Photo by Ola Nordmann",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "thumbnailCredit",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "title": {
         "edit": {
           "label": "Title",
@@ -144,16 +158,14 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "createdAt",
-        "updatedAt",
-        "title"
-      ],
       "edit": [
         [
           {
             "name": "thumbnail",
+            "size": 12
+          },
+          {
+            "name": "thumbnailCredit",
             "size": 12
           }
         ],
@@ -173,6 +185,12 @@
             "size": 12
           }
         ]
+      ],
+      "list": [
+        "id",
+        "createdAt",
+        "updatedAt",
+        "title"
       ]
     },
     "uid": "api::blog-post.blog-post"
