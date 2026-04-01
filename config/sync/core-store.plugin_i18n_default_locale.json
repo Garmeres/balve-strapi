@@ -1,7 +1,7 @@
 {
-  "key": "plugin_i18n_default_locale",
-  "value": "nb",
-  "type": "string",
-  "environment": null,
-  "tag": null
+	"key": "plugin_i18n_default_locale",
+	"value": "no",
+	"type": "string",
+	"environment": null,
+	"tag": null
 }
