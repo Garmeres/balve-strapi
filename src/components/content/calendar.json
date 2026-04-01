@@ -5,13 +5,6 @@
     "icon": "calendar"
   },
   "options": {},
-  "attributes": {
-    "updatedAtLabel": {
-      "type": "string",
-      "default": "Last updated",
-      "minLength": 3,
-      "required": true
-    }
-  },
+  "attributes": {},
   "config": {}
 }
