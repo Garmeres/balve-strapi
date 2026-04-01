@@ -1,0 +1,124 @@
+{
+  "key": "plugin_content_manager_configuration_components::content.heading",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "relationOpenMode": "modal",
+      "mainField": "text",
+      "defaultSortBy": "text",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "text": {
+        "edit": {
+          "label": "Text",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "text",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "level": {
+        "edit": {
+          "label": "Heading level",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "level",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "visible": {
+        "edit": {
+          "label": "Visible",
+          "description": "When false, the heading is only visible screen readers",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "visible",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "alignment": {
+        "edit": {
+          "label": "Alignment",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "alignment",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "level",
+            "size": 4
+          },
+          {
+            "name": "text",
+            "size": 8
+          }
+        ],
+        [
+          {
+            "name": "visible",
+            "size": 4
+          },
+          {
+            "name": "alignment",
+            "size": 8
+          }
+        ]
+      ],
+      "list": [
+        "id",
+        "text",
+        "level",
+        "visible"
+      ]
+    },
+    "uid": "content.heading",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

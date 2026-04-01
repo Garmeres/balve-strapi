@@ -24,6 +24,12 @@ const s3Upload = (env: Core.Config.Shared.ConfigParams["env"]) => ({
 const config = ({
 	env,
 }: Core.Config.Shared.ConfigParams): Core.Config.Plugin => ({
+	"config-sync": {
+		enabled: true,
+		config: {
+			importOnBootstrap: true,
+		},
+	},
 	upload: env("NODE_ENV") === "production" ? s3Upload(env) : { config: {} },
 	email: {
 		config: {

@@ -1,0 +1,242 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::home-page.home-page",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "relationOpenMode": "newTab",
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "Name",
+          "description": "Name of this page as displayed in the main menu",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "title": {
+        "edit": {
+          "label": "Title",
+          "description": "The page heading, displayed on the banner image",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "subtitle": {
+        "edit": {
+          "label": "Subtitle",
+          "description": "Text of the button that is displayed on the banner, underneath the subtitle",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "subtitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "bannerImage": {
+        "edit": {
+          "label": "Banner image",
+          "description": "Background image of the banner that is displayed on the top of the home page",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "bannerImage",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "bannerButtonText": {
+        "edit": {
+          "label": "Banner button text",
+          "description": "Text of the button that is displayed on the banner, underneath the subtitle",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "bannerButtonText",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "bannerButtonLink": {
+        "edit": {
+          "label": "Banner button link",
+          "description": "When the banner button is clicked, which page should it navigate to?",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "bannerButtonLink",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "body": {
+        "edit": {
+          "label": "Body",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "body",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "bannerImage",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "name",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "title",
+            "size": 4
+          },
+          {
+            "name": "subtitle",
+            "size": 8
+          }
+        ],
+        [
+          {
+            "name": "bannerButtonText",
+            "size": 6
+          },
+          {
+            "name": "bannerButtonLink",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "body",
+            "size": 12
+          }
+        ]
+      ],
+      "list": [
+        "id",
+        "name",
+        "title",
+        "subtitle"
+      ]
+    },
+    "uid": "api::home-page.home-page"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,257 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::contact.contact",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "relationOpenMode": "modal",
+      "mainField": "organisationName",
+      "defaultSortBy": "organisationName",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "organisationName": {
+        "edit": {
+          "label": "Organisation name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "organisationName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "organisationNumber": {
+        "edit": {
+          "label": "Organisation number",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "organisationNumber",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "email": {
+        "edit": {
+          "label": "E-mail",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "email",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "address": {
+        "edit": {
+          "label": "Address",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "address",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "vipps": {
+        "edit": {
+          "label": "Vipps",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "vipps",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "bankAccount": {
+        "edit": {
+          "label": "Bank account number",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "bankAccount",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "iban": {
+        "edit": {
+          "label": "IBAN",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "iban",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "swift": {
+        "edit": {
+          "label": "SWIFT",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "swift",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "organisationName",
+            "size": 6
+          },
+          {
+            "name": "organisationNumber",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "email",
+            "size": 6
+          },
+          {
+            "name": "vipps",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "address",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "bankAccount",
+            "size": 4
+          },
+          {
+            "name": "iban",
+            "size": 4
+          },
+          {
+            "name": "swift",
+            "size": 4
+          }
+        ]
+      ],
+      "list": [
+        "id",
+        "organisationName",
+        "organisationNumber",
+        "email"
+      ]
+    },
+    "uid": "api::contact.contact"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
