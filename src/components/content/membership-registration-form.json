@@ -5,6 +5,25 @@
     "icon": "user"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "lang": {
+      "type": "enumeration",
+      "required": true,
+      "default": "no",
+      "enum": [
+        "no",
+        "en",
+        "se"
+      ]
+    },
+    "iframeSrc": {
+      "type": "string",
+      "required": true
+    },
+    "termsAndConditions": {
+      "type": "blocks",
+      "required": false
+    }
+  },
   "config": {}
 }

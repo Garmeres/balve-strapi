@@ -68,7 +68,13 @@ export interface ContentMembershipRegistrationForm
     displayName: 'Membership registration';
     icon: 'user';
   };
-  attributes: {};
+  attributes: {
+    iframeSrc: Schema.Attribute.String & Schema.Attribute.Required;
+    lang: Schema.Attribute.Enumeration<['no', 'en', 'se']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'no'>;
+    termsAndConditions: Schema.Attribute.Blocks;
+  };
 }
 
 export interface ContentRichText extends Struct.ComponentSchema {

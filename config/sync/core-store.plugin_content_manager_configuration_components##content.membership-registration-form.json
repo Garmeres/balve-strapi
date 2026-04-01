@@ -20,6 +20,48 @@
           "sortable": false
         }
       },
+      "lang": {
+        "edit": {
+          "label": "Content language",
+          "description": "Language code for the content of the external registration form. Used by screen readers.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "lang",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "iframeSrc": {
+        "edit": {
+          "label": "Registration form URL",
+          "description": "The iframe URL of the Hypersys registration form. Required to embed the form into the website.",
+          "placeholder": "E.g. https://garmeres.hypersys.no/old/forms/innmelding/iframe/",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "iframeSrc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "termsAndConditions": {
+        "edit": {
+          "label": "Terms and conditions",
+          "description": "Scrollable rich text rendered on top of the registration form.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "termsAndConditions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "documentId": {
         "edit": {},
         "list": {
@@ -30,10 +72,29 @@
       }
     },
     "layouts": {
-      "list": [
-        "id"
+      "edit": [
+        [
+          {
+            "name": "lang",
+            "size": 4
+          },
+          {
+            "name": "iframeSrc",
+            "size": 8
+          }
+        ],
+        [
+          {
+            "name": "termsAndConditions",
+            "size": 12
+          }
+        ]
       ],
-      "edit": []
+      "list": [
+        "id",
+        "lang",
+        "iframeSrc"
+      ]
     },
     "uid": "content.membership-registration-form",
     "isComponent": true

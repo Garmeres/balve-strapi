@@ -1,0 +1,199 @@
+{
+  "key": "plugin_users-permissions_grant",
+  "value": {
+    "email": {
+      "icon": "envelope",
+      "enabled": false
+    },
+    "discord": {
+      "icon": "discord",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "callbackUrl": "api/auth/discord/callback",
+      "scope": [
+        "identify",
+        "email"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/discord/callback"
+    },
+    "facebook": {
+      "icon": "facebook-square",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "callbackUrl": "api/auth/facebook/callback",
+      "scope": [
+        "email"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/facebook/callback"
+    },
+    "google": {
+      "icon": "google",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "callbackUrl": "api/auth/google/callback",
+      "scope": [
+        "email"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/google/callback"
+    },
+    "github": {
+      "icon": "github",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "callbackUrl": "api/auth/github/callback",
+      "scope": [
+        "user",
+        "user:email"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/github/callback"
+    },
+    "microsoft": {
+      "icon": "windows",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "callbackUrl": "api/auth/microsoft/callback",
+      "scope": [
+        "user.read"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/microsoft/callback"
+    },
+    "twitter": {
+      "icon": "twitter",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "callbackUrl": "api/auth/twitter/callback",
+      "redirectUri": "http://localhost:1337/api/connect/twitter/callback"
+    },
+    "instagram": {
+      "icon": "instagram",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "callbackUrl": "api/auth/instagram/callback",
+      "scope": [
+        "user_profile"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/instagram/callback"
+    },
+    "vk": {
+      "icon": "vk",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "callbackUrl": "api/auth/vk/callback",
+      "scope": [
+        "email"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/vk/callback"
+    },
+    "twitch": {
+      "icon": "twitch",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "callbackUrl": "api/auth/twitch/callback",
+      "scope": [
+        "user:read:email"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/twitch/callback"
+    },
+    "linkedin": {
+      "icon": "linkedin",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "callbackUrl": "api/auth/linkedin/callback",
+      "scope": [
+        "r_liteprofile",
+        "r_emailaddress"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/linkedin/callback"
+    },
+    "cognito": {
+      "icon": "aws",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "subdomain": "my.subdomain.com",
+      "callback": "api/auth/cognito/callback",
+      "scope": [
+        "email",
+        "openid",
+        "profile"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/cognito/callback"
+    },
+    "reddit": {
+      "icon": "reddit",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "callback": "api/auth/reddit/callback",
+      "scope": [
+        "identity"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/reddit/callback"
+    },
+    "auth0": {
+      "icon": "",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "subdomain": "my-tenant.eu",
+      "callback": "api/auth/auth0/callback",
+      "scope": [
+        "openid",
+        "email",
+        "profile"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/auth0/callback"
+    },
+    "cas": {
+      "icon": "book",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "callback": "api/auth/cas/callback",
+      "scope": [
+        "openid email"
+      ],
+      "subdomain": "my.subdomain.com/cas",
+      "redirectUri": "http://localhost:1337/api/connect/cas/callback"
+    },
+    "patreon": {
+      "icon": "",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "callback": "api/auth/patreon/callback",
+      "scope": [
+        "identity",
+        "identity[email]"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/patreon/callback"
+    },
+    "keycloak": {
+      "icon": "",
+      "enabled": false,
+      "key": "",
+      "secret": "",
+      "subdomain": "myKeycloakProvider.com/realms/myrealm",
+      "callback": "api/auth/keycloak/callback",
+      "scope": [
+        "openid",
+        "email",
+        "profile"
+      ],
+      "redirectUri": "http://localhost:1337/api/connect/keycloak/callback"
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
