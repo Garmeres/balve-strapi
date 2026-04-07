@@ -28,14 +28,7 @@ export interface ContentCalendar extends Struct.ComponentSchema {
     displayName: 'Calendar';
     icon: 'calendar';
   };
-  attributes: {
-    updatedAtLabel: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        minLength: 3;
-      }> &
-      Schema.Attribute.DefaultTo<'Last updated'>;
-  };
+  attributes: {};
 }
 
 export interface ContentHeading extends Struct.ComponentSchema {

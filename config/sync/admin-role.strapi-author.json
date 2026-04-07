@@ -1,0 +1,315 @@
+{
+  "code": "strapi-author",
+  "name": "Author",
+  "description": "Authors can manage the content they have created.",
+  "permissions": [
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::blog-post.blog-post",
+      "properties": {
+        "fields": [
+          "thumbnail",
+          "title",
+          "slug",
+          "body"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::contact.contact",
+      "properties": {
+        "fields": [
+          "organisationName",
+          "organisationNumber",
+          "email",
+          "address",
+          "vipps",
+          "bankAccount",
+          "iban",
+          "swift"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::home-page.home-page",
+      "properties": {
+        "fields": [
+          "name",
+          "title",
+          "subtitle",
+          "bannerImage",
+          "bannerButtonText",
+          "bannerButtonLink",
+          "body"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::page.page",
+      "properties": {
+        "fields": [
+          "backgroundImage",
+          "name",
+          "slug",
+          "showInMenu",
+          "menuIndex",
+          "body"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::social-media.social-media",
+      "properties": {
+        "fields": [
+          "name",
+          "icon",
+          "url",
+          "index"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::contact.contact",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::social-media.social-media",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::blog-post.blog-post",
+      "properties": {
+        "fields": [
+          "thumbnail",
+          "title",
+          "slug",
+          "body"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::contact.contact",
+      "properties": {
+        "fields": [
+          "organisationName",
+          "organisationNumber",
+          "email",
+          "address",
+          "vipps",
+          "bankAccount",
+          "iban",
+          "swift"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::home-page.home-page",
+      "properties": {
+        "fields": [
+          "name",
+          "title",
+          "subtitle",
+          "bannerImage",
+          "bannerButtonText",
+          "bannerButtonLink",
+          "body"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::page.page",
+      "properties": {
+        "fields": [
+          "backgroundImage",
+          "name",
+          "slug",
+          "showInMenu",
+          "menuIndex",
+          "body"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::social-media.social-media",
+      "properties": {
+        "fields": [
+          "name",
+          "icon",
+          "url",
+          "index"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::blog-post.blog-post",
+      "properties": {
+        "fields": [
+          "thumbnail",
+          "title",
+          "slug",
+          "body"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::contact.contact",
+      "properties": {
+        "fields": [
+          "organisationName",
+          "organisationNumber",
+          "email",
+          "address",
+          "vipps",
+          "bankAccount",
+          "iban",
+          "swift"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::home-page.home-page",
+      "properties": {
+        "fields": [
+          "name",
+          "title",
+          "subtitle",
+          "bannerImage",
+          "bannerButtonText",
+          "bannerButtonLink",
+          "body"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::page.page",
+      "properties": {
+        "fields": [
+          "backgroundImage",
+          "name",
+          "slug",
+          "showInMenu",
+          "menuIndex",
+          "body"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::social-media.social-media",
+      "properties": {
+        "fields": [
+          "name",
+          "icon",
+          "url",
+          "index"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::upload.assets.copy-link",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.create",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.download",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::upload.configure-view",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    }
+  ]
+}
