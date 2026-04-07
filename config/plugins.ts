@@ -28,6 +28,10 @@ const config = ({
 		enabled: true,
 		config: {
 			importOnBootstrap: true,
+			// admin-role excluded: config-sync v3 doesn't handle Strapi v5 documentId fields.
+			// Roles are managed manually in Settings → Roles. When adding a new locale,
+			// remember to add it to the Editor role's content-type permissions.
+			excludedConfig: ["admin-role"],
 		},
 	},
 	upload: env("NODE_ENV") === "production" ? s3Upload(env) : { config: {} },
