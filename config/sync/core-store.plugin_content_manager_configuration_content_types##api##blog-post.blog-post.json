@@ -8,8 +8,8 @@
       "pageSize": 10,
       "relationOpenMode": "newTab",
       "mainField": "title",
-      "defaultSortBy": "title",
-      "defaultSortOrder": "ASC"
+      "defaultSortBy": "createdAt",
+      "defaultSortOrder": "DESC"
     },
     "metadatas": {
       "id": {
