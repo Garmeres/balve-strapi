@@ -1,221 +1,216 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::page.page",
-  "value": {
-    "settings": {
-      "bulkable": true,
-      "filterable": true,
-      "searchable": true,
-      "pageSize": 10,
-      "relationOpenMode": "newTab",
-      "mainField": "name",
-      "defaultSortBy": "name",
-      "defaultSortOrder": "ASC"
-    },
-    "metadatas": {
-      "id": {
-        "edit": {},
-        "list": {
-          "label": "id",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "backgroundImage": {
-        "edit": {
-          "label": "Background Image",
-          "description": "(Optional) Backdrop image to be displayed behind the page content",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "backgroundImage",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "name": {
-        "edit": {
-          "label": "Name",
-          "description": "Name of this page, as it appears in the main menu",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "name",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "slug": {
-        "edit": {
-          "label": "Slug",
-          "description": "Sets the page's URL. Click \"generate\" to generate a slug from the title",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "slug",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "showInMenu": {
-        "edit": {
-          "label": "Show in main menu",
-          "description": "Whether a link to this page should appear in the website's navigation menu",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "showInMenu",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "menuIndex": {
-        "edit": {
-          "label": "Menu index",
-          "description": "Lower numbers appear first in the menu",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "menuIndex",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "body": {
-        "edit": {
-          "label": "body",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "body",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "createdAt": {
-        "edit": {
-          "label": "createdAt",
-          "description": "",
-          "placeholder": "",
-          "visible": false,
-          "editable": true
-        },
-        "list": {
-          "label": "createdAt",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "updatedAt": {
-        "edit": {
-          "label": "updatedAt",
-          "description": "",
-          "placeholder": "",
-          "visible": false,
-          "editable": true
-        },
-        "list": {
-          "label": "updatedAt",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "createdBy": {
-        "edit": {
-          "label": "createdBy",
-          "description": "",
-          "placeholder": "",
-          "visible": false,
-          "editable": true,
-          "mainField": "firstname"
-        },
-        "list": {
-          "label": "createdBy",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "updatedBy": {
-        "edit": {
-          "label": "updatedBy",
-          "description": "",
-          "placeholder": "",
-          "visible": false,
-          "editable": true,
-          "mainField": "firstname"
-        },
-        "list": {
-          "label": "updatedBy",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "documentId": {
-        "edit": {},
-        "list": {
-          "label": "documentId",
-          "searchable": true,
-          "sortable": true
-        }
-      }
-    },
-    "layouts": {
-      "list": [
-        "id",
-        "createdAt",
-        "updatedAt",
-        "name"
-      ],
-      "edit": [
-        [
-          {
-            "name": "backgroundImage",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "name",
-            "size": 6
-          },
-          {
-            "name": "slug",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "showInMenu",
-            "size": 6
-          },
-          {
-            "name": "menuIndex",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "body",
-            "size": 12
-          }
-        ]
-      ]
-    },
-    "uid": "api::page.page"
-  },
-  "type": "object",
-  "environment": null,
-  "tag": null
+	"key": "plugin_content_manager_configuration_content_types::api::page.page",
+	"value": {
+		"settings": {
+			"bulkable": true,
+			"filterable": true,
+			"searchable": true,
+			"pageSize": 10,
+			"relationOpenMode": "newTab",
+			"mainField": "name",
+			"defaultSortBy": "name",
+			"defaultSortOrder": "ASC"
+		},
+		"metadatas": {
+			"id": {
+				"edit": {},
+				"list": {
+					"label": "id",
+					"searchable": true,
+					"sortable": true
+				}
+			},
+			"backgroundImage": {
+				"edit": {
+					"label": "Background Image",
+					"description": "(Optional) Backdrop image to be displayed behind the page content",
+					"placeholder": "",
+					"visible": true,
+					"editable": true
+				},
+				"list": {
+					"label": "backgroundImage",
+					"searchable": false,
+					"sortable": false
+				}
+			},
+			"name": {
+				"edit": {
+					"label": "Name",
+					"description": "Name of this page, as it appears in the main menu",
+					"placeholder": "",
+					"visible": true,
+					"editable": true
+				},
+				"list": {
+					"label": "name",
+					"searchable": true,
+					"sortable": true
+				}
+			},
+			"slug": {
+				"edit": {
+					"label": "Slug",
+					"description": "Sets the page's URL. Click \"generate\" to generate a slug from the title",
+					"placeholder": "",
+					"visible": true,
+					"editable": true
+				},
+				"list": {
+					"label": "slug",
+					"searchable": true,
+					"sortable": true
+				}
+			},
+			"showInMenu": {
+				"edit": {
+					"label": "Show in main menu",
+					"description": "Whether a link to this page should appear in the website's navigation menu",
+					"placeholder": "",
+					"visible": true,
+					"editable": true
+				},
+				"list": {
+					"label": "showInMenu",
+					"searchable": true,
+					"sortable": true
+				}
+			},
+			"menuIndex": {
+				"edit": {
+					"label": "Menu index",
+					"description": "Lower numbers appear first in the menu",
+					"placeholder": "",
+					"visible": true,
+					"editable": true
+				},
+				"list": {
+					"label": "menuIndex",
+					"searchable": true,
+					"sortable": true
+				}
+			},
+			"body": {
+				"edit": {
+					"label": "body",
+					"description": "",
+					"placeholder": "",
+					"visible": true,
+					"editable": true
+				},
+				"list": {
+					"label": "body",
+					"searchable": false,
+					"sortable": false
+				}
+			},
+			"createdAt": {
+				"edit": {
+					"label": "createdAt",
+					"description": "",
+					"placeholder": "",
+					"visible": false,
+					"editable": true
+				},
+				"list": {
+					"label": "createdAt",
+					"searchable": true,
+					"sortable": true
+				}
+			},
+			"updatedAt": {
+				"edit": {
+					"label": "updatedAt",
+					"description": "",
+					"placeholder": "",
+					"visible": false,
+					"editable": true
+				},
+				"list": {
+					"label": "updatedAt",
+					"searchable": true,
+					"sortable": true
+				}
+			},
+			"createdBy": {
+				"edit": {
+					"label": "createdBy",
+					"description": "",
+					"placeholder": "",
+					"visible": false,
+					"editable": true,
+					"mainField": "firstname"
+				},
+				"list": {
+					"label": "createdBy",
+					"searchable": true,
+					"sortable": true
+				}
+			},
+			"updatedBy": {
+				"edit": {
+					"label": "updatedBy",
+					"description": "",
+					"placeholder": "",
+					"visible": false,
+					"editable": true,
+					"mainField": "firstname"
+				},
+				"list": {
+					"label": "updatedBy",
+					"searchable": true,
+					"sortable": true
+				}
+			},
+			"documentId": {
+				"edit": {},
+				"list": {
+					"label": "documentId",
+					"searchable": true,
+					"sortable": true
+				}
+			}
+		},
+		"layouts": {
+			"list": ["backgroundImage", "name", "createdAt", "updatedAt"],
+			"edit": [
+				[
+					{
+						"name": "backgroundImage",
+						"size": 12
+					}
+				],
+				[
+					{
+						"name": "name",
+						"size": 6
+					},
+					{
+						"name": "slug",
+						"size": 6
+					}
+				],
+				[
+					{
+						"name": "showInMenu",
+						"size": 6
+					},
+					{
+						"name": "menuIndex",
+						"size": 6
+					}
+				],
+				[
+					{
+						"name": "body",
+						"size": 12
+					}
+				]
+			]
+		},
+		"uid": "api::page.page"
+	},
+	"type": "object",
+	"environment": null,
+	"tag": null
 }
