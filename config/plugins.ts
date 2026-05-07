@@ -42,10 +42,9 @@ const config = ({
 				host: env("SMTP_HOST"),
 				port: env.int("SMTP_PORT", 587),
 				secure: false,
-				auth: {
-					user: env("SMTP_USERNAME"),
-					pass: env("SMTP_PASSWORD"),
-				},
+				...(env("SMTP_USERNAME")
+					? { auth: { user: env("SMTP_USERNAME"), pass: env("SMTP_PASSWORD") } }
+					: {}),
 			},
 			settings: {
 				defaultFrom: "balve@garmeres.com",
