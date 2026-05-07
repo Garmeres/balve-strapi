@@ -47,8 +47,8 @@ const config = ({
 					: {}),
 			},
 			settings: {
-				defaultFrom: "balve@garmeres.com",
-				defaultReplyTo: "admin@garmeres.com",
+				defaultFrom: '"Garmeres Balve" <balve@garmeres.com>',
+				defaultReplyTo: "balve@garmeres.com",
 			},
 		},
 	},
