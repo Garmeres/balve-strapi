@@ -653,6 +653,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'content.calendar',
         'content.membership-registration-form',
         'content.blog-posts',
+        'content.profile-card',
+        'content.heading',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

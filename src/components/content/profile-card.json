@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_content_profile_cards",
+  "info": {
+    "displayName": "Profile Card",
+    "icon": "emotionHappy"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "pronouns": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

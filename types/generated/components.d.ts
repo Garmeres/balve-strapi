@@ -70,6 +70,22 @@ export interface ContentMembershipRegistrationForm
   };
 }
 
+export interface ContentProfileCard extends Struct.ComponentSchema {
+  collectionName: 'components_content_profile_cards';
+  info: {
+    displayName: 'Profile Card';
+    icon: 'emotionHappy';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    email: Schema.Attribute.Email;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    pronouns: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ContentRichText extends Struct.ComponentSchema {
   collectionName: 'components_content_rich_texts';
   info: {
@@ -88,6 +104,7 @@ declare module '@strapi/strapi' {
       'content.calendar': ContentCalendar;
       'content.heading': ContentHeading;
       'content.membership-registration-form': ContentMembershipRegistrationForm;
+      'content.profile-card': ContentProfileCard;
       'content.rich-text': ContentRichText;
     }
   }
