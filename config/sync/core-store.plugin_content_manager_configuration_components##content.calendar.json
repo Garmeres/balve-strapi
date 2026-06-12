@@ -20,20 +20,6 @@
           "sortable": false
         }
       },
-      "updatedAtLabel": {
-        "edit": {
-          "label": "updatedAtLabel",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "updatedAtLabel",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "documentId": {
         "edit": {},
         "list": {
@@ -45,17 +31,9 @@
     },
     "layouts": {
       "list": [
-        "id",
-        "updatedAtLabel"
+        "id"
       ],
-      "edit": [
-        [
-          {
-            "name": "updatedAtLabel",
-            "size": 6
-          }
-        ]
-      ]
+      "edit": []
     },
     "uid": "content.calendar",
     "isComponent": true
