@@ -15,11 +15,11 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.48.0",
-    "@strapi/provider-email-nodemailer": "^5.47.1",
-    "@strapi/provider-upload-aws-s3": "^5.47.1",
-    "@strapi/strapi": "5.48.0",
-    "better-sqlite3": "12.10.0",
+    "@strapi/plugin-cloud": "5.48.1",
+    "@strapi/provider-email-nodemailer": "^5.48.1",
+    "@strapi/provider-upload-aws-s3": "^5.48.1",
+    "@strapi/strapi": "5.48.1",
+    "better-sqlite3": "12.11.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.30.4",
